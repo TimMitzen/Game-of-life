@@ -1,0 +1,13 @@
+.homeButton{
+position: fixed;
+top: 10%;
+left: 10%;
+transform: translate(-50%, -50%);
+}
+
+.enter{
+   position: fixed;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
