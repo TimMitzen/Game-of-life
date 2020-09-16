@@ -1,7 +1,7 @@
 .homeButton{
 position: fixed;
 top: 10%;
-left: 10%;
+left: 5%;
 transform: translate(-50%, -50%);
 }
 
@@ -10,4 +10,8 @@ transform: translate(-50%, -50%);
    top: 60%;
    left: 50%;
    transform: translate(-50%, -50%);
+}
+.random, .start-stop, .random{
+   
+   flex-direction: row;
 }
