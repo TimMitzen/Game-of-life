@@ -2,9 +2,18 @@
 position: fixed;
 top: 10%;
 left: 5%;
+background-color: red;
+color: white;
 transform: translate(-50%, -50%);
 }
-
+.rulesButton{
+   position: fixed;
+   top: 15%;
+   left: 5%;
+   background-color: red;
+   color: white;
+   transform: translate(-50%, -50%); 
+}
 .enter{
    position: fixed;
    top: 60%;
@@ -14,4 +23,16 @@ transform: translate(-50%, -50%);
 .random, .start-stop, .random{
    
    flex-direction: row;
+}
+.rules {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   
+   
+}
+ul{
+ color: white;
+ 
+  
 }

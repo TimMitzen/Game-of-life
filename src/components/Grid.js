@@ -106,11 +106,14 @@ function Grid() {
           }}
           style={{
            
-            width: 20, height: 20, 
+            width: '19px', height: '19px', 
             backgroundColor: grid[rIndex][cIndex] ? 'red':undefined, border: 'solid 1px green' }}/>
           ))}
           <Link to ='/'>
           <button className='homeButton'>Home</button>
+          </Link>
+          <Link to = '/rules'>
+          <button className = 'rulesButton'>Click for rules</button>
           </Link>
       </div>
       
