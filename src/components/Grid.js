@@ -1,8 +1,10 @@
 import React, {useState, useCallback, useRef} from 'react';
-
+import './Home.css'
 import '../App.css';
 import produce from 'immer'
 import { Router, Link } from 'react-router-dom';
+import ControlButtons from './ControlsButtons';
+import AltGrid from './AltGrid'
 
 const numRows = 40
 const numColumns = 40
@@ -25,10 +27,14 @@ const generatedEmptyGrid = () => {
   return rows
 }
 
-function Grid() {
+function Grid({}) {
+   const [speed, setSpeed] = useState(1000)
   const [grid, setGrid ] = useState(()=>{
     return generatedEmptyGrid()
   })
+  const select = (event) =>{
+     setSpeed(parseInt(event.target.value))
+  }
   const [start, setStart] = useState(false)
   const startRef = useRef(start)
   startRef.current = start
@@ -59,37 +65,16 @@ function Grid() {
     })
    
 
-    setTimeout(runningSim,100)
-  }, [])
+    setTimeout(runningSim,speed)
+  }, [speed])
   
   return (
    
     <div className="App">
       <header className="App-header">
-      <div className='btn-group'>
-      <button className ='start-stop' onClick={
-        ()=>{
-          setStart(!start)
-          if(!start)
-          {
-            startRef.current = true
-            runningSim()}
-        }
-      }>
-      {start ? 'Stop' : 'Start'}</button>
-      <button className='clear' onClick={()=>{
-        setGrid(generatedEmptyGrid())
-
-      }}>Clear</button>
-
-      <button className='random' onClick={()=>{
-        const rows = [];
-        for (let i = 0; i < numRows; i++){
-          rows.push(Array.from(Array(numColumns), () => Math.random() > 0.5 ? 1 : 0))
-        }
-        setGrid(rows)
-      }}>Random</button>
-      </div>
+      
+     
+      
        <div style ={{
           display: 'grid',
           gridTemplateColumns: `repeat(${numColumns}, 20px)`
@@ -109,12 +94,25 @@ function Grid() {
             width: '19px', height: '19px', 
             backgroundColor: grid[rIndex][cIndex] ? 'red':undefined, border: 'solid 1px green' }}/>
           ))}
+          
+          
           <Link to ='/'>
           <button className='homeButton'>Home</button>
           </Link>
-          <Link to = '/rules'>
-          <button className = 'rulesButton'>Click for rules</button>
-          </Link>
+          <ControlButtons setGrid={setGrid}
+          runningSim={runningSim}
+          start={start}
+          noStart ={!start}
+          numRows ={numRows}
+          numColumns={numColumns}
+          generatedEmptyGrid={generatedEmptyGrid}
+          setStart={setStart}
+          startRef={startRef}
+          speed ={speed}
+          select = {select}
+
+          />
+          
       </div>
       
    

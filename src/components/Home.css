@@ -9,10 +9,17 @@ transform: translate(-50%, -50%);
 .rulesButton{
    position: fixed;
    top: 15%;
-   left: 5%;
+   left: 9.5%;
    background-color: red;
    color: white;
    transform: translate(-50%, -50%); 
+}
+.directions{
+   position: fixed;
+   top:18%;
+   left:1.5%;
+   color: white;
+   transform: translate
 }
 .enter{
    position: fixed;
@@ -20,7 +27,7 @@ transform: translate(-50%, -50%);
    left: 50%;
    transform: translate(-50%, -50%);
 }
-.random, .start-stop, .random{
+.random, .start-stop, .clear{
    
    flex-direction: row;
 }
@@ -28,11 +35,30 @@ transform: translate(-50%, -50%);
    display:flex;
    justify-content: center;
    align-items: center;
+   padding-top: 10px;
    
    
 }
+.rulesBox {
+ border: 1px solid white;
+ padding: 5px;
+}
 ul{
  color: white;
+ line-height: 30px!important;
+ padding-bottom: 10px;
  
   
+}
+.btn-direction{
+   color: white;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   font-size: 20px;
+}
+.gameRules{
+   color: white;
+   font-size: 30px;
+   text-align: center;
+
 }

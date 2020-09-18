@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useRef } from "react";
 import "../App.css";
 
-
 const numRows = 40;
 const numColumns = 40;
 const operations = [
@@ -29,8 +28,8 @@ export const ten = () => {
 
 export const explode = () => {
   const rows = [];
-  for (let row = 0; row < rowNum; row++) {
-    rows.push(Array(numColumn).fill(0));
+  for (let row = 0; row < numRows; row++) {
+    rows.push(Array(numColumns).fill(0));
   }
   rows[13][13] = 1;
   rows[12][13] = 1;
@@ -49,7 +48,7 @@ export const explode = () => {
 
 export const spaceship = () =>{
    const rows = []
-   for (let row = 0; row < rowNum; row++){
+   for (let row = 0; row < numRows; row++){
       rows.push(Array(numColumns).fill(0))
    }
   rows[13][13] = 1;
@@ -66,7 +65,7 @@ export const spaceship = () =>{
 
 export const Default = () => {
    const rows = []
-   for (let row = 0; row < rowNum; row++){
+   for (let row = 0; row < numRows; row++){
       rows.push(Array(numColumns).fill(0))
    }
    return rows
