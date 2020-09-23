@@ -4,10 +4,9 @@ import '../App.css';
 import produce from 'immer'
 import { Router, Link } from 'react-router-dom';
 import ControlButtons from './ControlsButtons';
-import AltGrid from './AltGrid'
 
-const numRows = 40
-const numColumns = 40
+
+
 const operations = [
   [0,1],
   [0,-1],
@@ -19,22 +18,32 @@ const operations = [
   [-1,0],
 
 ]
-const generatedEmptyGrid = () => {
-  const rows = [];
-  for (let i = 0; i < numRows; i++){
-    rows.push(Array.from(Array(numColumns), ()=>0))
-  }
-  return rows
-}
 
-function Grid({}) {
-   const [speed, setSpeed] = useState(1000)
+
+function Grid() {
+   const generatedEmptyGrid = () => {
+      const rows = [];
+      for (let i = 0; i < numRows; i++){
+        rows.push(Array.from(Array(numColumns), ()=>0))
+      }
+      return rows
+    }
+   const [numRows, setNumRows] = useState(30)
+   const [numColumns, setNumColumns] = useState(40)
+   const [speed, setSpeed] = useState()
   const [grid, setGrid ] = useState(()=>{
     return generatedEmptyGrid()
   })
   const select = (event) =>{
      setSpeed(parseInt(event.target.value))
   }
+  const selectColumns = (event) =>{
+     setNumColumns(parseInt(event))
+  }
+  const selectRows = (event) =>{
+     setNumRows(parseInt(event))
+  }
+
   const [start, setStart] = useState(false)
   const startRef = useRef(start)
   startRef.current = start
@@ -66,7 +75,8 @@ function Grid({}) {
    
 
     setTimeout(runningSim,speed)
-  }, [speed])
+  }, [speed,numRows,numColumns])
+
   
   return (
    
@@ -95,10 +105,16 @@ function Grid({}) {
             backgroundColor: grid[rIndex][cIndex] ? 'red':undefined, border: 'solid 1px green' }}/>
           ))}
           
-          
+          <div className ='gridButtons'>
           <Link to ='/'>
           <button className='homeButton'>Home</button>
           </Link>
+         
+          <Link to = '/rules'>
+          <button className = 'rulesButton'>Click for rules and directions</button>
+          
+          </Link>
+          </div>
           <ControlButtons setGrid={setGrid}
           runningSim={runningSim}
           start={start}
@@ -110,8 +126,12 @@ function Grid({}) {
           startRef={startRef}
           speed ={speed}
           select = {select}
-
+          selectColumns = {selectColumns}
+          selectRows = {selectRows}
+          numColumns={numColumns}
+          numRows={numRows}
           />
+          
           
       </div>
       

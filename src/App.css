@@ -82,28 +82,7 @@ html{
   font-size: calc(10px + 2vmin);
   color: white;
 }
- .btn-group{
-   display: flex;
- }
- .start-stop ,.random ,.clear{
-  background-color: red;
-  color: white;
-  padding: 7px 25px;
-  cursor: pointer;
-  float: left;
-}
-
-.btn-group:after{
-  content:'';
-  clear: both;
-  display: table;
-}
-.speed{
-  background-color: red;
-  color: white;
-  padding: 1px 20px;
-}
-
+ 
 
 
 

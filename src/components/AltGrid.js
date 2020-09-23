@@ -1,18 +1,11 @@
 import React, { useState, useCallback, useRef } from "react";
 import "../App.css";
 
-const numRows = 40;
-const numColumns = 40;
-const operations = [
-  [0, 1],
-  [0, -1],
-  [1, -1],
-  [-1, 1],
-  [1, 1],
-  [-1, -1],
-  [1, 0],
-  [-1, 0],
-];
+
+const numColumns = 40
+const numRows = 30
+
+
 export const ten = () => {
   const rows = [];
   for (let row = 0; row < numRows; row++) {
@@ -70,16 +63,17 @@ export const Default = () => {
    }
    return rows
 }
-export const Grids = (value) =>{
+export const AltGrid = (value) =>{
    switch (value){
-      case ten:
+      case 'ten':
          return ten()
-      case explode:
+      case "explode":
          return explode()
-      case spaceship:
+      case "spaceship":
          return spaceship()
       default:
-         return Grids()
+         return Default()
 
    }
 }
+export default AltGrid

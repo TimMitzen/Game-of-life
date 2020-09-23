@@ -1,15 +1,15 @@
-import React, {useState} from 'react'
-import Grid from './Grid'
-import {Link} from 'react-router-dom'
+import React from 'react'
+import {AltGrid} from './AltGrid'
 import './Home.css'
-const ControlButtons =({
-setGrid,setStart,start,startRef,numColumns,numRows,generatedEmptyGrid,runningSim, select
-})=>{
-   
-   const [controls, setControls] = useState(true)
-   const [run, setRun] = useState(false)
-  
 
+const ControlButtons =({
+setGrid,setStart,start,startRef,numColumns,numRows,generatedEmptyGrid,runningSim, select, selectColumns, selectRows 
+})=>{
+  
+    
+     
+    
+    
    return(
    <div className='btn-group'>
      <button className ='start-stop' onClick={
@@ -33,9 +33,7 @@ setGrid,setStart,start,startRef,numColumns,numRows,generatedEmptyGrid,runningSim
         }
         setGrid(rows)
       }}>Random</button>
-      <Link to = '/rules'>
-          <button className = 'rulesButton'>Click for rules and directions</button>
-          </Link>
+     
       <select className='speed' onChange = {event=>{
          select(event)}}>
          <option hidden>Speed</option>
@@ -43,7 +41,17 @@ setGrid,setStart,start,startRef,numColumns,numRows,generatedEmptyGrid,runningSim
          <option value='1000'>1 seconds</option>
          <option value ='1'>100 milliseconds</option>
          </select>
-     
+         <select className="grids" onChange={(event)=>{
+            setGrid(AltGrid(event.target.value))
+         }}>
+            <option hidden>Modes</option>
+            <option value="Default">Default</option>
+            <option value='spaceship'>SpaceShip</option>
+            <option value="ten">Ten rows</option>
+            <option value="explode">Explode</option>
+         </select>
+         
+        
       </div>
    )
 }

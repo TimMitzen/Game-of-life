@@ -1,31 +1,36 @@
-.homeButton{
-position: fixed;
-top: 10%;
-left: 5%;
-background-color: red;
-color: white;
-transform: translate(-50%, -50%);
-}
-.rulesButton{
-   position: fixed;
-   top: 15%;
-   left: 9.5%;
+
+
+
+
+.rulesButton ,.homeButton{
+  
    background-color: red;
    color: white;
    transform: translate(-50%, -50%); 
+   outline: none;
+   border-radius: 25px;
+   padding: 7px 25px;
+
 }
+
 .directions{
    position: fixed;
    top:18%;
    left:1.5%;
    color: white;
-   transform: translate
+   transform: translate;
+   outline:none;
 }
 .enter{
    position: fixed;
    top: 60%;
    left: 50%;
    transform: translate(-50%, -50%);
+   background-color: red;
+   color: white;
+   border-radius: 25px;
+   padding: 7px 25px;
+   outline: none;
 }
 .random, .start-stop, .clear{
    
@@ -61,4 +66,63 @@ ul{
    font-size: 30px;
    text-align: center;
 
+}
+.gridButtons{
+   display:flex;
+   flex-direction: column;
+   position: fixed;
+   top: 15%;
+   left: 10%;
+   
+}
+.homeButton{
+   margin-right: 265px;
+}
+
+.btn-group{
+   display: flex;
+   
+ }
+ .start-stop ,.random ,.clear{
+  background-color: red;
+  color: white;
+  padding: 7px 25px;
+  outline: none;
+  
+  cursor: pointer;
+  margin-right: 3px;
+  margin-top: 3px;
+  border-radius: 25px;
+ }
+
+.btn-group:after{
+  content:'';
+  clear: both;
+  display: table;
+}
+.speed{
+  margin-top: 5px;
+  margin-bottom: 3px;
+  background-color: red;
+  color: white;
+  padding: 1px 20px;
+  margin-left: 80px;
+  outline: none;
+}
+.grids{
+  margin-top:5px;
+  margin-bottom: 3px;
+  background-color: red;
+  color: white;
+  padding: 1px 19px;
+  margin-right: 20px;
+  outline: none;
+}
+.back-to-grid{
+   background-color: red;
+   padding: 1px 19px;
+   color: white;
+   outline: none;
+   padding: 7px 25px;
+   border-radius: 25px;
 }

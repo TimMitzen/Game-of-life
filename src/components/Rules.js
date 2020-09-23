@@ -26,8 +26,9 @@ const Rules = () => {
         <ul>Random button gives a random game</ul>
              <ul>Start Button, starts the game</ul>
              <ul>Start becomes the stop button</ul>
-             <ul>Speed sets the speed of the game,default is 2 seconds</ul>
+             <ul>Speed sets the speed of the game, default is 2 seconds</ul>
              <ul>Clear button clears the screen</ul>
+             <ul>Modes gives you different games</ul>
         </div>
         <Link to = '/grid'>
          <button className='back-to-grid'>Back to game</button>
