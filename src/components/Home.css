@@ -1,6 +1,6 @@
 .rulesButton,
 .homeButton,
-.presets {
+.presets ,.back-to-grid{
   background-color: red;
   color: white;
   transform: translate(-50%, -50%);
@@ -121,4 +121,5 @@ ul {
   outline: none;
   padding: 7px 25px;
   border-radius: 25px;
+  margin-right: 120px;
 }
