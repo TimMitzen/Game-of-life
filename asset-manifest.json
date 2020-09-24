@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Game-of-life/static/css/main.133117f5.chunk.css",
-    "main.js": "/Game-of-life/static/js/main.42a156cf.chunk.js",
-    "main.js.map": "/Game-of-life/static/js/main.42a156cf.chunk.js.map",
-    "runtime-main.js": "/Game-of-life/static/js/runtime-main.108b9ca7.js",
-    "runtime-main.js.map": "/Game-of-life/static/js/runtime-main.108b9ca7.js.map",
-    "static/js/2.70a23fd2.chunk.js": "/Game-of-life/static/js/2.70a23fd2.chunk.js",
-    "static/js/2.70a23fd2.chunk.js.map": "/Game-of-life/static/js/2.70a23fd2.chunk.js.map",
+    "main.js": "/Game-of-life/static/js/main.d86dd022.chunk.js",
+    "main.js.map": "/Game-of-life/static/js/main.d86dd022.chunk.js.map",
+    "runtime-main.js": "/Game-of-life/static/js/runtime-main.eb43cb65.js",
+    "runtime-main.js.map": "/Game-of-life/static/js/runtime-main.eb43cb65.js.map",
+    "static/js/2.050cfb22.chunk.js": "/Game-of-life/static/js/2.050cfb22.chunk.js",
+    "static/js/2.050cfb22.chunk.js.map": "/Game-of-life/static/js/2.050cfb22.chunk.js.map",
     "index.html": "/Game-of-life/index.html",
-    "precache-manifest.bb0c8f2ef2ae9d1a2135c083d899bea1.js": "/Game-of-life/precache-manifest.bb0c8f2ef2ae9d1a2135c083d899bea1.js",
+    "precache-manifest.edba5238654f03af64a522ac33636581.js": "/Game-of-life/precache-manifest.edba5238654f03af64a522ac33636581.js",
     "service-worker.js": "/Game-of-life/service-worker.js",
     "static/css/main.133117f5.chunk.css.map": "/Game-of-life/static/css/main.133117f5.chunk.css.map",
-    "static/js/2.70a23fd2.chunk.js.LICENSE.txt": "/Game-of-life/static/js/2.70a23fd2.chunk.js.LICENSE.txt"
+    "static/js/2.050cfb22.chunk.js.LICENSE.txt": "/Game-of-life/static/js/2.050cfb22.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.108b9ca7.js",
-    "static/js/2.70a23fd2.chunk.js",
+    "static/js/runtime-main.eb43cb65.js",
+    "static/js/2.050cfb22.chunk.js",
     "static/css/main.133117f5.chunk.css",
-    "static/js/main.42a156cf.chunk.js"
+    "static/js/main.d86dd022.chunk.js"
   ]
 }
