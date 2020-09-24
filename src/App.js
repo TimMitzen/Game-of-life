@@ -1,8 +1,7 @@
-import React, {useState, useCallback, useRef} from 'react';
-import Home from './components/Home'
-import Grid from './components/Grid'
+import React from 'react';
+
 import './App.css';
-import {Route, BrowserRouter as Router, Link, Switch} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 import Routes from './routes/Routes'
 
 function App(){

@@ -3,7 +3,7 @@ import "./Home.css";
 import "../App.css";
 import produce from "immer";
 import { Link } from "react-router-dom";
-import ControlButtons from "./ControlsButtons";
+import OtherControlButtons from "./OtherControlButtons";
 
 const operations = [
   [0, 1],
@@ -16,7 +16,7 @@ const operations = [
   [-1, 0],
 ];
 
-function Grid() {
+function OtherGrid() {
   const generatedEmptyGrid = () => {
     const rows = [];
     for (let i = 0; i < numRows; i++) {
@@ -24,21 +24,14 @@ function Grid() {
     }
     return rows;
   };
-  const [numRows, setNumRows] = useState(30);
-  const [numColumns, setNumColumns] = useState(40);
+  const [numRows] = useState(30);
+  const [numColumns] = useState(40);
   const [speed, setSpeed] = useState(1000);
   const [grid, setGrid] = useState(() => {
     return generatedEmptyGrid();
   });
   const select = (event) => {
     setSpeed(parseInt(event.target.value));
-    event.preventDefault();
-  };
-  const selectColumns = (event) => {
-    setNumColumns(parseInt(event.target.value));
-  };
-  const selectRows = (event) => {
-    setNumRows(parseInt(event.target.value));
   };
 
   const [start, setStart] = useState(false);
@@ -81,11 +74,11 @@ function Grid() {
   return (
     <div className="App">
       <header className="App-header">
+        Presets
         <div
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(${numColumns}, 20px)`,
-            padding: "50px",
           }}
         >
           {grid.map((rows, rIndex) =>
@@ -118,11 +111,12 @@ function Grid() {
                 Click for rules and directions
               </button>
             </Link>
-            <Link to="/presets">
-              <button className="presets">Click for preset grid</button>
+            <Link to="/grid">
+              <button className="back-to-grid">Back to Main Grid</button>
             </Link>
           </div>
-          <ControlButtons
+
+          <OtherControlButtons
             setGrid={setGrid}
             runningSim={runningSim}
             start={start}
@@ -134,8 +128,6 @@ function Grid() {
             startRef={startRef}
             speed={speed}
             select={select}
-            selectColumns={selectColumns}
-            selectRows={selectRows}
           />
         </div>
       </header>
@@ -143,4 +135,4 @@ function Grid() {
   );
 }
 
-export default Grid;
+export default OtherGrid;

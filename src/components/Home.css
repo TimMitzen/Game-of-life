@@ -1,116 +1,112 @@
-
-
-
-
-.rulesButton ,.homeButton{
-  
-   background-color: red;
-   color: white;
-   transform: translate(-50%, -50%); 
-   outline: none;
-   border-radius: 25px;
-   padding: 7px 25px;
-
+.rulesButton,
+.homeButton,
+.presets {
+  background-color: red;
+  color: white;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border-radius: 25px;
+  padding: 7px 25px;
+}
+.presets {
+  margin-right: 100px;
 }
 
-.directions{
-   position: fixed;
-   top:18%;
-   left:1.5%;
-   color: white;
-   transform: translate;
-   outline:none;
+.directions {
+  position: fixed;
+  top: 18%;
+  left: 1.5%;
+  color: white;
+  transform: translate;
+  outline: none;
 }
-.enter{
-   position: fixed;
-   top: 60%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: red;
-   color: white;
-   border-radius: 25px;
-   padding: 7px 25px;
-   outline: none;
+.enter {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  border-radius: 25px;
+  padding: 7px 25px;
+  outline: none;
 }
-.random, .start-stop, .clear{
-   
-   flex-direction: row;
+.random,
+.start-stop,
+.clear {
+  flex-direction: row;
 }
 .rules {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   padding-top: 10px;
-   
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 .rulesBox {
- border: 1px solid white;
- padding: 5px;
+  border: 1px solid white;
+  padding: 5px;
 }
-ul{
- color: white;
- line-height: 30px!important;
- padding-bottom: 10px;
- 
-  
+ul {
+  color: white;
+  line-height: 30px !important;
+  padding-bottom: 10px;
 }
-.btn-direction{
-   color: white;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   font-size: 20px;
+.btn-direction {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
-.gameRules{
-   color: white;
-   font-size: 30px;
-   text-align: center;
-
+.gameRules {
+  color: white;
+  font-size: 30px;
+  text-align: center;
 }
-.gridButtons{
-   display:flex;
-   flex-direction: column;
-   position: fixed;
-   top: 15%;
-   left: 10%;
-   
+.gridButtons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 15%;
+  left: 5%;
 }
-.homeButton{
-   margin-right: 265px;
+.homeButton {
+  margin-right: 265px;
 }
 
-.btn-group{
-   display: flex;
-   
- }
- .start-stop ,.random ,.clear{
+.btn-group {
+  display: flex;
+}
+.start-stop,
+.random,
+.clear {
   background-color: red;
   color: white;
   padding: 7px 25px;
   outline: none;
-  
+
   cursor: pointer;
   margin-right: 3px;
   margin-top: 3px;
   border-radius: 25px;
- }
+}
 
-.btn-group:after{
-  content:'';
+.btn-group:after {
+  content: "";
   clear: both;
   display: table;
 }
-.speed{
+.speed,
+.gridSize {
   margin-top: 5px;
   margin-bottom: 3px;
   background-color: red;
   color: white;
   padding: 1px 20px;
-  margin-left: 80px;
+  margin-left: 30px;
   outline: none;
 }
-.grids{
-  margin-top:5px;
+.grids {
+  margin-top: 5px;
   margin-bottom: 3px;
   background-color: red;
   color: white;
@@ -118,11 +114,11 @@ ul{
   margin-right: 20px;
   outline: none;
 }
-.back-to-grid{
-   background-color: red;
-   padding: 1px 19px;
-   color: white;
-   outline: none;
-   padding: 7px 25px;
-   border-radius: 25px;
+.back-to-grid {
+  background-color: red;
+  padding: 1px 19px;
+  color: white;
+  outline: none;
+  padding: 7px 25px;
+  border-radius: 25px;
 }

@@ -1,19 +1,16 @@
 import React from "react";
-
+import { AltGrid } from "./AltGrid";
 import "./Home.css";
 
-const ControlButtons = ({
+const OtherControlButtons = ({
   setGrid,
   setStart,
   start,
   startRef,
-  numColumns,
-  numRows,
   generatedEmptyGrid,
   runningSim,
   select,
-  selectColumns,
-  selectRows,
+  
 }) => {
   return (
     <div className="btn-group">
@@ -37,20 +34,13 @@ const ControlButtons = ({
       >
         Clear
       </button>
-      <button
-        className="random"
-        onClick={() => {
-          const rows = [];
-          for (let i = 0; i < numRows; i++) {
-            rows.push(
-              Array.from(Array(numColumns), () => (Math.random() > 0.5 ? 1 : 0))
-            );
-          }
-          setGrid(rows);
-        }}
-      >
-        Random
-      </button>
+      {/* <button className='random' onClick={()=>{
+        const rows = [];
+        for (let i = 0; i < numRows; i++){
+          rows.push(Array.from(Array(numColumns), () => Math.random() > 0.5 ? 1 : 0))
+        }
+        setGrid(rows)
+      }}>Random</button> */}
 
       <select
         className="speed"
@@ -63,20 +53,19 @@ const ControlButtons = ({
         <option value="1000">1 seconds</option>
         <option value="1">100 milliseconds</option>
       </select>
-
       <select
-        className="gridSize"
+        className="grids"
         onChange={(event) => {
-          selectColumns(event);
+          setGrid(AltGrid(event.target.value));
         }}
       >
-        <option hidden>Grid Size</option>
-        <option value="40">Default</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
-        <option value="60">60</option>
+        <option hidden>Modes</option>
+        <option value="Default">Default</option>
+        <option value="spaceship">SpaceShip</option>
+        <option value="ten">Ten rows</option>
+        <option value="explode">Explode</option>
       </select>
     </div>
   );
 };
-export default ControlButtons;
+export default OtherControlButtons;

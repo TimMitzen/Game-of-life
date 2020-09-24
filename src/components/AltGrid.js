@@ -1,12 +1,8 @@
-import React, { useState, useCallback, useRef } from "react";
 import "../App.css";
 
-
-const numColumns = 40
-const numRows = 30
-
-
 export const ten = () => {
+  const numColumns = 40;
+  const numRows = 30;
   const rows = [];
   for (let row = 0; row < numRows; row++) {
     rows.push(Array(numColumns).fill(0));
@@ -20,6 +16,8 @@ export const ten = () => {
 };
 
 export const explode = () => {
+  const numColumns = 40;
+  const numRows = 30;
   const rows = [];
   for (let row = 0; row < numRows; row++) {
     rows.push(Array(numColumns).fill(0));
@@ -39,11 +37,13 @@ export const explode = () => {
   return rows;
 };
 
-export const spaceship = () =>{
-   const rows = []
-   for (let row = 0; row < numRows; row++){
-      rows.push(Array(numColumns).fill(0))
-   }
+export const spaceship = () => {
+  const numColumns = 40;
+  const numRows = 30;
+  const rows = [];
+  for (let row = 0; row < numRows; row++) {
+    rows.push(Array(numColumns).fill(0));
+  }
   rows[13][13] = 1;
   rows[11][13] = 1;
   rows[13][16] = 1;
@@ -54,26 +54,27 @@ export const spaceship = () =>{
   rows[10][15] = 1;
   rows[10][14] = 1;
   return rows;
-}
+};
 
 export const Default = () => {
-   const rows = []
-   for (let row = 0; row < numRows; row++){
-      rows.push(Array(numColumns).fill(0))
-   }
-   return rows
-}
-export const AltGrid = (value) =>{
-   switch (value){
-      case 'ten':
-         return ten()
-      case "explode":
-         return explode()
-      case "spaceship":
-         return spaceship()
-      default:
-         return Default()
-
-   }
-}
-export default AltGrid
+  const numColumns = 40;
+  const numRows = 30;
+  const rows = [];
+  for (let row = 0; row < numRows; row++) {
+    rows.push(Array(numColumns).fill(0));
+  }
+  return rows;
+};
+export const AltGrid = (value) => {
+  switch (value) {
+    case "ten":
+      return ten();
+    case "explode":
+      return explode();
+    case "spaceship":
+      return spaceship();
+    default:
+      return Default();
+  }
+};
+export default AltGrid;
