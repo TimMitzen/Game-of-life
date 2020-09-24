@@ -7,9 +7,12 @@ import Routes from './routes/Routes'
 function App(){
   return(
     <div>
-    <Router>
+    {/* <Router>
     <Routes/>
-    </Router>
+    </Router> */}
+    <div>
+      hello
+    </div>
     </div>
   )
 
