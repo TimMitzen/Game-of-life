@@ -6,10 +6,10 @@ import Routes from './routes/Routes'
 
 function App(){
   return(
-    <div>
-    {/* <Router>
+    <div style={{backgroundColor: "lightblue"}}>
+    <Router>
     <Routes/>
-    </Router> */}
+    </Router>
     <div>
       hello
     </div>
