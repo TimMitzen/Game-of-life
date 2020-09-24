@@ -74,7 +74,7 @@ function OtherGrid() {
   return (
     <div className="App">
       <header className="App-header">
-        Presets
+        
         <div
           style={{
             display: "grid",
@@ -102,7 +102,7 @@ function OtherGrid() {
           )}
 
           <div className="gridButtons">
-            <Link to="/">
+            <Link to="/Game-of-life">
               <button className="homeButton">Home</button>
             </Link>
 
@@ -112,7 +112,7 @@ function OtherGrid() {
               </button>
             </Link>
             <Link to="/grid">
-              <button className="back-to-grid">Back to Main Grid</button>
+              <button className="backToGrid">Back to Main Grid</button>
             </Link>
           </div>
 

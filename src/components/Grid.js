@@ -85,7 +85,7 @@ function Grid() {
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(${numColumns}, 20px)`,
-            padding: "50px",
+            padding: "100px",
           }}
         >
           {grid.map((rows, rIndex) =>
@@ -109,7 +109,7 @@ function Grid() {
           )}
 
           <div className="gridButtons">
-            <Link to="/">
+            <Link to="/Game-of-life/">
               <button className="homeButton">Home</button>
             </Link>
 

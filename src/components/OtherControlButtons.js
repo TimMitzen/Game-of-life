@@ -34,13 +34,7 @@ const OtherControlButtons = ({
       >
         Clear
       </button>
-      {/* <button className='random' onClick={()=>{
-        const rows = [];
-        for (let i = 0; i < numRows; i++){
-          rows.push(Array.from(Array(numColumns), () => Math.random() > 0.5 ? 1 : 0))
-        }
-        setGrid(rows)
-      }}>Random</button> */}
+      
 
       <select
         className="speed"

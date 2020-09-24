@@ -1,6 +1,6 @@
 .rulesButton,
 .homeButton,
-.presets ,.back-to-grid{
+.presets ,.backToGrid{
   background-color: red;
   color: white;
   transform: translate(-50%, -50%);
@@ -57,7 +57,7 @@ ul {
   padding-bottom: 10px;
   font-size: 20px;
 }
-.gameRules {
+.gameRules, .btn-direction {
   color: white;
   font-size: 30px;
   text-align: center;
@@ -115,6 +115,15 @@ ul {
   outline: none;
 }
 .back-to-grid {
+  background-color: red;
+  padding: 1px 19px;
+  color: white;
+  outline: none;
+  padding: 7px 25px;
+  border-radius: 25px;
+  margin-left: 100px;
+}
+.backToGrid{
   background-color: red;
   padding: 1px 19px;
   color: white;
