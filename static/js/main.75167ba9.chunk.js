@@ -1,0 +1,2 @@
+(this["webpackJsonpgame-of-life"]=this["webpackJsonpgame-of-life"]||[]).push([[0],{10:function(e,n,t){},12:function(e,n,t){},20:function(e,n,t){e.exports=t(31)},25:function(e,n,t){},31:function(e,n,t){"use strict";t.r(n);var l=t(0),a=t.n(l),o=t(18),c=t.n(o),r=(t(25),t(10),t(1),t(3));t(4),t(12),t(9);var u=function(){return a.a.createElement("div",null,a.a.createElement("div",null,"hello"))};c.a.render(a.a.createElement(r.a,null,a.a.createElement(u,null)),document.getElementById("root"))}},[[20,1,2]]]);
+//# sourceMappingURL=main.75167ba9.chunk.js.map
