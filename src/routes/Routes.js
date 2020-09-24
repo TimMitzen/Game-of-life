@@ -8,7 +8,7 @@ import OtherGrid from "../components/OtherGrid";
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
       <Route path="/grid" component={Grid} />
       <Route path="/rules" component={Rules} />
       <Route path="/presets" component={OtherGrid} />
