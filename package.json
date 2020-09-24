@@ -1,6 +1,6 @@
 {
   "homepage": "https://timmitzen.github.io/",
-  "name": "game-of-life",
+  "name": "Game-of-life",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
