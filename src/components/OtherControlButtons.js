@@ -1,6 +1,7 @@
 import React from "react";
 import { AltGrid } from "./AltGrid";
 import "./Home.css";
+import Generation from "./Generation";
 
 const OtherControlButtons = ({
   setGrid,
@@ -10,6 +11,7 @@ const OtherControlButtons = ({
   generatedEmptyGrid,
   runningSim,
   select,
+  generation
   
 }) => {
   return (
@@ -59,6 +61,7 @@ const OtherControlButtons = ({
         <option value="ten">Ten rows</option>
         <option value="explode">Explode</option>
       </select>
+      <Generation generation={generation}/>
     </div>
   );
 };

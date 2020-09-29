@@ -27,6 +27,7 @@ function OtherGrid() {
   const [numRows] = useState(30);
   const [numColumns] = useState(40);
   const [speed, setSpeed] = useState(1000);
+  const [newGeneration, setGeneration]= useState(0)
   const [grid, setGrid] = useState(() => {
     return generatedEmptyGrid();
   });
@@ -37,10 +38,13 @@ function OtherGrid() {
   const [start, setStart] = useState(false);
   const startRef = useRef(start);
   startRef.current = start;
+  const generation = useRef(0)
   const runningSim = useCallback(() => {
     if (!startRef.current) {
       return;
     }
+    generation.current++
+    setGeneration(generation.current)
     setGrid((grid) => {
       return produce(grid, (gridCopy) => {
         for (let r = 0; r < numRows; r++) {
@@ -128,6 +132,7 @@ function OtherGrid() {
             startRef={startRef}
             speed={speed}
             select={select}
+            generation ={generation}
           />
         </div>
       </header>

@@ -24,9 +24,11 @@ function Grid() {
     }
     return rows;
   };
+  
   const [numRows, setNumRows] = useState(30);
   const [numColumns, setNumColumns] = useState(40);
   const [speed, setSpeed] = useState(1000);
+  const [newGeneration, setGeneration]= useState(0)
   const [grid, setGrid] = useState(() => {
     return generatedEmptyGrid();
   });
@@ -40,14 +42,18 @@ function Grid() {
   const selectRows = (event) => {
     setNumRows(parseInt(event.target.value));
   };
-
+  
   const [start, setStart] = useState(false);
   const startRef = useRef(start);
   startRef.current = start;
+  const generation = useRef(0)
   const runningSim = useCallback(() => {
     if (!startRef.current) {
       return;
     }
+    generation.current++;
+    setGeneration(generation.current)
+    
     setGrid((grid) => {
       return produce(grid, (gridCopy) => {
         for (let r = 0; r < numRows; r++) {
@@ -107,8 +113,9 @@ function Grid() {
               />
             ))
           )}
-
+          
           <div className="gridButtons">
+            
             <Link to="/Game-of-life/">
               <button className="homeButton">Home</button>
             </Link>
@@ -132,6 +139,7 @@ function Grid() {
             generatedEmptyGrid={generatedEmptyGrid}
             setStart={setStart}
             startRef={startRef}
+            generation = {generation}
             speed={speed}
             select={select}
             selectColumns={selectColumns}

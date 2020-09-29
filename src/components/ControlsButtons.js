@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Home.css";
+import Generation from "./Generation";
 
 const ControlButtons = ({
   setGrid,
@@ -14,8 +15,10 @@ const ControlButtons = ({
   select,
   selectColumns,
   selectRows,
+  generation
 }) => {
   return (
+    <>
     <div className="btn-group">
       <button
         className="start-stop"
@@ -33,6 +36,7 @@ const ControlButtons = ({
         className="clear"
         onClick={() => {
           setGrid(generatedEmptyGrid());
+          generation.current = 0
         }}
       >
         Clear
@@ -44,10 +48,10 @@ const ControlButtons = ({
           for (let i = 0; i < numRows; i++) {
             rows.push(
               Array.from(Array(numColumns), () => (Math.random() > 0.5 ? 1 : 0))
-            );
-          }
-          setGrid(rows);
-        }}
+              );
+            }
+            setGrid(rows);
+          }}
       >
         Random
       </button>
@@ -76,7 +80,9 @@ const ControlButtons = ({
         <option value="50">50</option>
         <option value="60">60</option>
       </select>
+      <Generation generation ={generation}/>
     </div>
+    </>
   );
 };
 export default ControlButtons;
