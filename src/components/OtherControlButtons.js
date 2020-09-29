@@ -32,7 +32,7 @@ const OtherControlButtons = ({
         className="clear"
         onClick={() => {
           setGrid(generatedEmptyGrid());
-          generation.current = 0
+          generation.current = 0;
         }}
       >
         Clear
