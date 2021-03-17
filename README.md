@@ -53,7 +53,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 https://timmitzen.github.io/Game-of-life/#/
 
 ### Conways Game of Life in react
-This Conway's game of life done it react. 
+This Conway's game of life done in react. 
 
 ### What it is
 
